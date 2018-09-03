@@ -1,0 +1,20 @@
+%section#full_slider.full_slider_inner.padding_0
+  #pallax_slider.only_parallax.stars_dottat
+    .center.vertical-center
+      .row
+        .col-md-12.col-md-12.wow.bg-login.pb-4.fadeInDown{"data-wow-delay" => "0.5s", "data-wow-duration" => "2s"}
+          %h1.text-center.login-title Log in
+          %hr/
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .form-group
+              = f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control'
+            .form-group
+              = f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control'
+            - if devise_mapping.rememberable?
+              .form-group
+                = f.check_box :remember_me
+                = f.label :remember_me
+            .form-group
+              = f.submit "Log in", class: "btn btn-block btn-lg btn-design-login"
+          .text-center
+            = render "devise/shared/links"

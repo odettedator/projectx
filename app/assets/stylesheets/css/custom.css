@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+    File Name: custom.css
+    Template Name: Flat.Seo - Responsive HTML5 Template
+    Created By: WordPressShowcase
+    Envato Profile: https://themeforest.net/user/WordPressShowcase
+    Website: https://showwp.com
+    Version: 1.0
+-------------------------------------------------------------------*/
+
+/** ADD YOUR AWESOME CODES HERE **/
+
+.login-title {
+    color: #f1977b;
+    text-transform: uppercase;
+}
+
+.bg-login {
+    background-color: #fff;
+    padding-right: 150px;
+    padding-left: 150px;
+    border-radius: 5%
+}
+
+.btn-design-login {
+    background-color: #f1977b;
+    color: #fff;
+}
+
+.btn-design-login:hover {
+    color: #f1977b;
+    background-color: #fff;
+    border: solid 1px #f1977b;
+}

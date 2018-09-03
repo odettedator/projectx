@@ -1,0 +1,27 @@
+= render './layouts/shared/header'
+%section#full_slider.full_slider_inner.padding_0
+  #pallax_slider.only_parallax.stars_dottat
+    .center.vertical-center
+      .row
+        .col-md-12.col-md-12.wow.bg-login.pb-4.fadeInDown{"data-wow-delay" => "0.5s", "data-wow-duration" => "2s"}
+          %h1.text-center.login-title= t "devise.invitations.new.header"
+          %hr/
+          = form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f|
+            = devise_error_messages!
+            .form-group
+              %p
+                = f.label :first_name
+                %br/
+                = f.text_field :first_name, class: 'form-control'
+            .form-group
+              %p
+                = f.label :last_name
+                %br/
+                = f.text_field :last_name, class: 'form-control'
+            .form-group
+              %p
+                = f.label :email
+                %br/
+                = f.text_field :email, class: 'form-control'
+            .form-group
+              %p= f.submit t("devise.invitations.new.submit_button"), class: 'form-control btn btn-block btn-design-login'

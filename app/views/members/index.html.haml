@@ -1,0 +1,13 @@
+%section#full_slider.full_slider_inner.padding_0
+  #pallax_slider.only_parallax.stars_dottat
+    .center.vertical-center
+      .row
+        .col-md-12.col-md-12.wow.bg-login.py-5.fadeInDown{"data-wow-delay" => "0.5s", "data-wow-duration" => "2s"}
+          %h1.text-center.login-title Profile
+          %hr/
+          %p.py-2
+            First Name: #{@user.first_name}
+          %p.py-2
+            Last Name: #{@user.last_name}
+          %p.py-2
+            Email: #{@user.email}

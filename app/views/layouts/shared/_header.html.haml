@@ -1,0 +1,106 @@
+%body
+  %header#default_header.header_style_3.fix_header
+    / header bottom
+    .header.white_fonts
+      .container
+        .row
+          .col-lg-3.col-md-2.col-xs-12
+            / logo start
+            .logo
+              %a{:href => root_path}= image_tag("logos/white_logo")
+            / logo end
+          .col-lg-9.col-md-10.col-xs-12
+            / menu start
+            .menu_side
+              #navbar_menu.small-screen
+                %ul.first-ul
+                  %li
+                    %a{:href => "index.html"}
+                      HOME
+                      %i.fa.fa-angle-down
+                    %ul
+                      %li
+                        %a{:href => "index.html"} Home Page 1
+                      %li
+                        %a{:href => "home_page_2.html"} Home Page 2
+                      %li
+                        %a{:href => "home_page_3.html"} Home Page 3
+                      %li
+                        %a{:href => "home_page_4.html"} Home Page 4
+                      %li
+                        %a{:href => "home_page_5.html"} Home Page 5
+                  %li
+                    %a{:href => "service.html"}
+                      SERVICES
+                      %i.fa.fa-angle-down
+                    %ul
+                      %li
+                        %a{:href => "service.html"} Service Page 1
+                      %li
+                        %a{:href => "service_page_2.html"} Service Page 2
+                      %li
+                        %a{:href => "service_page_3.html"} Service Page 3
+                  %li
+                    %a{:href => "#"}
+                      PAGES
+                      %i.fa.fa-angle-down
+                    %ul
+                      %li
+                        %a{:href => "about_page_1.html"} About Page 1
+                      %li
+                        %a{:href => "about_page_2.html"} About Page 2
+                      %li
+                        %a{:href => "team_page_1.html"} Team Page 1
+                      %li
+                        %a{:href => "team_page_2.html"} Team Page 2
+                      %li
+                        %a{:href => "blog_detail.html"} Blog Detail Page
+                      %li
+                        %a{:href => "page_404_1.html"} 404 Page
+                  %li
+                    %a{:href => "blog.html"}
+                      BLOG
+                      %i.fa.fa-angle-down
+                    %ul
+                      %li
+                        %a{:href => "blog.html"} Blog Page 1
+                      %li
+                        %a{:href => "blog_page2.html"} Blog Page 2
+                      %li
+                        %a{:href => "blog_page3.html"} Blog Page 3
+                      %li
+                        %a{:href => "blog_page4.html"} Blog Page 4
+                      %li
+                        %a{:href => "blog_page5.html"} Blog Page 5
+                  %li
+                    %a{:href => "case_studies.html"}
+                      CASE STUDIES
+                      %i.fa.fa-angle-down
+                    %ul
+                      %li
+                        %a{:href => "case_studies.html"} Case Studies Page 1
+                      %li
+                        %a{:href => "case_studies_page_2.html"} Case Studies Page 2
+                      %li
+                        %a{:href => "case_studies_page_3.html"} Case Studies Page 3
+                      %li
+                        %a{:href => "case_studies_page_4.html"} Case Studies Page 4
+                  %li
+                    %a{:href => "shop.html"}
+                      SHOP
+                      %i.fa.fa-angle-down
+                    %ul
+                      %li
+                        %a{:href => "shop.html"} Shop Page 1
+                  %li
+                    - if current_user.blank?
+                      = link_to 'Login', new_user_session_path
+                    - else
+                      = link_to 'Logout', destroy_user_session_path
+              .search_icon
+                %ul
+                  %li
+                    %a{"data-target" => "#search_bar", "data-toggle" => "modal", :href => "#"}
+                      %i.fa.fa-search{"aria-hidden" => "true"}
+            / menu end
+    / header bottom end
