@@ -4,6 +4,10 @@
       .row
         .col-md-12.col-md-12.wow.bg-login.pb-4.fadeInDown{"data-wow-delay" => "0.5s", "data-wow-duration" => "2s"}
           %h1.text-center.login-title Log in
+          - if notice
+            %p.notice= notice
+          - if alert
+            %p.alert= alert
           %hr/
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
             .form-group

@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/command_center/super_admin', as: 'rails_admin'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
-    invitations: 'users/invitations'
+    invitations: 'users/invitations',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords'
   }
   root to: 'home#index'
   get 'members', to: 'members#index'

@@ -1,14 +1,24 @@
-%h2= t 'devise.invitations.edit.header'
-= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f|
-  = devise_error_messages!
-  = f.hidden_field :invitation_token, readonly: true
-  - if f.object.class.require_password_on_accepting
-    %p
-      = f.label :password
-      %br/
-      = f.password_field :password
-    %p
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation
-  %p= f.submit t("devise.invitations.edit.submit_button")
+= render './layouts/shared/header'
+%section#full_slider.full_slider_inner.padding_0
+  #pallax_slider.only_parallax.stars_dottat
+    .center.vertical-center
+      .row
+        .col-md-12.col-md-12.wow.bg-login.pb-4.fadeInDown{"data-wow-delay" => "0.5s", "data-wow-duration" => "2s"}
+          %h1.text-center.login-title= t 'devise.invitations.edit.header'
+          %hr/
+          = form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f|
+            = devise_error_messages!
+            = f.hidden_field :invitation_token, readonly: true
+            - if f.object.class.require_password_on_accepting
+              .form-group
+                %p
+                  = f.label :password
+                  %br/
+                  = f.password_field :password, class: 'form-control'
+              .form-group
+                %p
+                  = f.label :password_confirmation
+                  %br/
+                  = f.password_field :password_confirmation, class: 'form-control'
+              .form-group
+                %p= f.submit t("devise.invitations.edit.submit_button"), class: 'form-control btn btn-block btn-design-login'
