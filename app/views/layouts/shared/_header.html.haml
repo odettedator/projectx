@@ -15,83 +15,71 @@
               #navbar_menu.small-screen
                 %ul.first-ul
                   %li
-                    %a{:href => "index.html"}
+                    %a{:href => root_path}
                       HOME
-                      %i.fa.fa-angle-down
-                    %ul
-                      %li
-                        %a{:href => "index.html"} Home Page 1
-                      %li
-                        %a{:href => "home_page_2.html"} Home Page 2
-                      %li
-                        %a{:href => "home_page_3.html"} Home Page 3
-                      %li
-                        %a{:href => "home_page_4.html"} Home Page 4
-                      %li
-                        %a{:href => "home_page_5.html"} Home Page 5
                   %li
-                    %a{:href => "service.html"}
+                    %a{:href => "#"}
                       SERVICES
                       %i.fa.fa-angle-down
                     %ul
                       %li
-                        %a{:href => "service.html"} Service Page 1
+                        %a{:href => "#"} Service Page 1
                       %li
-                        %a{:href => "service_page_2.html"} Service Page 2
+                        %a{:href => "#"} Service Page 2
                       %li
-                        %a{:href => "service_page_3.html"} Service Page 3
+                        %a{:href => "#"} Service Page 3
                   %li
                     %a{:href => "#"}
                       PAGES
                       %i.fa.fa-angle-down
                     %ul
                       %li
-                        %a{:href => "about_page_1.html"} About Page 1
+                        %a{:href => "#"} About Page 1
                       %li
-                        %a{:href => "about_page_2.html"} About Page 2
+                        %a{:href => "#"} About Page 2
                       %li
-                        %a{:href => "team_page_1.html"} Team Page 1
+                        %a{:href => "#"} Team Page 1
                       %li
-                        %a{:href => "team_page_2.html"} Team Page 2
+                        %a{:href => "#"} Team Page 2
                       %li
-                        %a{:href => "blog_detail.html"} Blog Detail Page
+                        %a{:href => "#"} Blog Detail Page
                       %li
-                        %a{:href => "page_404_1.html"} 404 Page
+                        %a{:href => "#"} 404 Page
                   %li
-                    %a{:href => "blog.html"}
+                    %a{:href => "#"}
                       BLOG
                       %i.fa.fa-angle-down
                     %ul
                       %li
-                        %a{:href => "blog.html"} Blog Page 1
+                        %a{:href => "#"} Blog Page 1
                       %li
-                        %a{:href => "blog_page2.html"} Blog Page 2
+                        %a{:href => "#"} Blog Page 2
                       %li
-                        %a{:href => "blog_page3.html"} Blog Page 3
+                        %a{:href => "#"} Blog Page 3
                       %li
-                        %a{:href => "blog_page4.html"} Blog Page 4
+                        %a{:href => "#"} Blog Page 4
                       %li
-                        %a{:href => "blog_page5.html"} Blog Page 5
+                        %a{:href => "#"} Blog Page 5
                   %li
-                    %a{:href => "case_studies.html"}
+                    %a{:href => "#"}
                       CASE STUDIES
                       %i.fa.fa-angle-down
                     %ul
                       %li
-                        %a{:href => "case_studies.html"} Case Studies Page 1
+                        %a{:href => "#"} Case Studies Page 1
                       %li
-                        %a{:href => "case_studies_page_2.html"} Case Studies Page 2
+                        %a{:href => "#"} Case Studies Page 2
                       %li
-                        %a{:href => "case_studies_page_3.html"} Case Studies Page 3
+                        %a{:href => "#"} Case Studies Page 3
                       %li
-                        %a{:href => "case_studies_page_4.html"} Case Studies Page 4
+                        %a{:href => "#"} Case Studies Page 4
                   %li
-                    %a{:href => "shop.html"}
+                    %a{:href => "#"}
                       SHOP
                       %i.fa.fa-angle-down
                     %ul
                       %li
-                        %a{:href => "shop.html"} Shop Page 1
+                        %a{:href => "#"} Shop Page 1
                   %li
                     - if current_user.blank?
                       = link_to 'Login', new_user_session_path
