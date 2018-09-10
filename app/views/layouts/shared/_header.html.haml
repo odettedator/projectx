@@ -28,23 +28,24 @@
                         %a{:href => "#"} Service Page 2
                       %li
                         %a{:href => "#"} Service Page 3
-                  %li
-                    %a{:href => "#"}
-                      PAGES
-                      %i.fa.fa-angle-down
-                    %ul
-                      %li
-                        %a{:href => "#"} About Page 1
-                      %li
-                        %a{:href => "#"} About Page 2
-                      %li
-                        %a{:href => "#"} Team Page 1
-                      %li
-                        %a{:href => "#"} Team Page 2
-                      %li
-                        %a{:href => "#"} Blog Detail Page
-                      %li
-                        %a{:href => "#"} 404 Page
+                    -# - unless current_user.member?
+                    %li
+                      %a{:href => "#"}
+                        PAGES
+                        %i.fa.fa-angle-down
+                      %ul
+                        %li
+                          %a{:href => "#"} About Page 1
+                        %li
+                          %a{:href => "#"} About Page 2
+                        %li
+                          %a{:href => "#"} Team Page 1
+                        %li
+                          %a{:href => "#"} Team Page 2
+                        %li
+                          %a{:href => "#"} Blog Detail Page
+                        %li
+                          %a{:href => "#"} 404 Page
                   %li
                     %a{:href => "#"}
                       BLOG
